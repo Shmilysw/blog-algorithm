@@ -1,0 +1,45 @@
+{
+    "scripts": {
+        "dev": "vitepress dev",
+        "build": "vitepress build && node .vitepress/genFeed.js",
+        "serve": "vitepress serve",
+        "lib:build": "node ./build"
+    },
+    "name": "algorithm",
+    "version": "0.4.2",
+    "description": "vitepress-theme-sakura",
+    "repository": {
+        "url": "git+https://github.com/flaribbit/vitepress-theme-sakura.git"
+    },
+    "main": ".vitepress/theme/Layout.vue",
+    "keywords": [
+        "vitepress",
+        "theme",
+        "sakura"
+    ],
+    "author": "flaribbit",
+    "license": "ISC",
+    "dependencies": {
+        "feed": "^4.2.2",
+        "gray-matter": "^4.0.3"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.14",
+        "@vitejs/plugin-vue": "^2.3.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "sass": "^1.52.3",
+        "vite": "^2.9.12",
+        "vitepress": "^1.0.0-alpha.10",
+        "vue": "^3.2.37"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "files": [
+        ".vitepress/fix-katex.js",
+        ".vitepress/genFeed.js",
+        ".vitepress/posts.data.js",
+        ".vitepress/theme"
+    ]
+}
