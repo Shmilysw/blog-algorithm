@@ -4,16 +4,17 @@
 set -e
 
 # 构建项目
-vitepress build
+# vitepress build
 
 # 进入生成的文件夹
-cd .vitepress/dist
+# cd .vitepress/dist
 
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 
 git add .
-git commit -m "deploy"
+# git commit -m "deploy"
+git commit -m "update"
 
 # git push 推送到仓库
 git push
