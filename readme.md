@@ -17,7 +17,7 @@
 ![preview](./preview.webp)
 
 ---
-**以下为主题介绍**
+<!-- **以下为主题介绍**
 
 ## 快速开始
 
@@ -169,4 +169,4 @@ tags: [标签1, 标签2]
 - [hexo-theme-yun](https://github.com/YunYouJun/hexo-theme-yun)
 - [vuejs/blog](https://github.com/vuejs/blog)
 - [wordpress-theme-Sakurairo](https://github.com/mirai-mamori/Sakurairo)
-- [xiaowai-api](https://api.ixiaowai.cn/)
+- [xiaowai-api](https://api.ixiaowai.cn/) -->

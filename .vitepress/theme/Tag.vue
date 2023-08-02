@@ -89,6 +89,7 @@ onMounted(() => {
         color: var(--color-gray);
         border: 1px solid var(--color-border);
         transition: all 0.2s ease-out;
+        background-color: #fff;
 
         &:hover,
         &.active {

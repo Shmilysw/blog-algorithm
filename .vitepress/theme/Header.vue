@@ -90,7 +90,9 @@ header {
     align-items: center;
     justify-content: space-between;
     // rgba(255, 255, 255, 0.9)
-    background: rgba(255, 255, 255, 0.6);
+    // background: rgba(240, 255, 255, 0.6);
+    // background-color: azure;
+    background: rgba(250, 246, 241, 0.6);
     z-index: 100;
 
     .brand {

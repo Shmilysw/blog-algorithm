@@ -1,5 +1,5 @@
 ---
-title: Leetcode 2681. 英雄的力量
+title: LeetCode 2681. 英雄的力量
 date: 2023-08-01
 tags: [思维, 贡献法]
 ---
@@ -7,7 +7,7 @@ tags: [思维, 贡献法]
 ---
 ## 贡献法
 
-## [Leetcode 2681. 英雄的力量](https://leetcode.cn/problems/power-of-heroes/description/)
+## [LeetCode 2681. 英雄的力量](https://leetcode.cn/problems/power-of-heroes/description/)
 
 `困难`
 

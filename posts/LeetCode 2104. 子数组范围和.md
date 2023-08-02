@@ -106,7 +106,7 @@ public:
         // 计算结果
         long long res = 0;
         for (int i = 0; i < len ; i ++ ) {
-            //i作为最大值使用了(i - llarge[i]) * (rlarge[i] - i)次 需要在结果中增加这些
+            // i作为最大值使用了(i - llarge[i]) * (rlarge[i] - i)次 需要在结果中增加这些
             // 为什么是乘？ 因为对于左边的任一一个i到large[i]的中间，我们都可以选择任一一个i到rlarge[i]中间的任意一个下标作为右边界，即最终为乘法
             res += nums[i] * 1ll * (i - llarge[i]) * (rlarge[i] - i);
             res -= nums[i] * 1ll * (i - lsmall[i]) * (rsmall[i] - i);
