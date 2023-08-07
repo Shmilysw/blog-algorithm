@@ -1,13 +1,13 @@
 ---
-title: LeetCode 6987. 使数组和小于等于 x 的最少时间
+title: LeetCode 2809. 使数组和小于等于 x 的最少时间
 date: 2023-08-07
 tags: [dp, 贪心]
 ---
 
 ---
-## dp
+## dp + 贪心
 
-## [LeetCode 6987. 使数组和小于等于 x 的最少时间](https://leetcode.cn/problems/minimum-time-to-make-array-sum-at-most-x/)
+## [LeetCode 2809. 使数组和小于等于 x 的最少时间](https://leetcode.cn/problems/minimum-time-to-make-array-sum-at-most-x/)
 
 <font color=red>困难</font>
 

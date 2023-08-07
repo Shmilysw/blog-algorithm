@@ -7,7 +7,7 @@ tags: [dp, 数位dp]
 ---
 ## 数位dp
 
-## [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers/)
+## [LeetCode 2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers/)
 
 <font color=red>困难</font>
 

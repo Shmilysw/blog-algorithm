@@ -8,7 +8,7 @@ tags: [dp, 数位dp]
 
 ## 数位dp
 
-## [2719. 统计整数数目](https://leetcode.cn/problems/count-of-integers/description/)
+## [LeetCode 2719. 统计整数数目](https://leetcode.cn/problems/count-of-integers/description/)
 
 <font color=red>困难</font>
 

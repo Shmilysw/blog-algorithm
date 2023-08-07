@@ -7,7 +7,7 @@ tags: [dp, 数位dp]
 ---
 ## 数位dp
 
-## [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range/)
+## [LeetCode 2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range/)
 
 <font color=red>困难</font>
 
