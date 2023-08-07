@@ -9,7 +9,7 @@ tags: [dp, 数位dp]
 
 ## [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range/)
 
-`困难`
+<font color=red>困难</font>
 
 给你两个正整数 low 和 high ，都用字符串表示，请你统计闭区间 [low, high] 内的 步进数字 数目。
 

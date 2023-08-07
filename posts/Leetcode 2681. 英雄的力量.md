@@ -9,7 +9,7 @@ tags: [思维, 贡献法]
 
 ## [LeetCode 2681. 英雄的力量](https://leetcode.cn/problems/power-of-heroes/description/)
 
-`困难`
+<font color=red>困难</font>
 
 给你一个下标从 0 开始的整数数组 nums ，它表示英雄的能力值。如果我们选出一部分英雄，这组英雄的 力量 定义为：
 

@@ -9,7 +9,7 @@ tags: [思维, 贡献法]
 
 ## [LeetCode 2281. 巫师的总力量和](https://leetcode.cn/problems/sum-of-total-strength-of-wizards/description/)
 
-`困难`
+<font color=red>困难</font>
 
 作为国王的统治者，你有一支巫师军队听你指挥。
 

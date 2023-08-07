@@ -10,7 +10,7 @@ tags: [dp, 数位dp]
 
 ## [2719. 统计整数数目](https://leetcode.cn/problems/count-of-integers/description/)
 
-`困难`
+<font color=red>困难</font>
 
 给你两个数字字符串 num1 和 num2 ，以及两个整数 max_sum 和 min_sum 。如果一个整数 x 满足以下条件，我们称它是一个好整数：
 

@@ -9,7 +9,7 @@ tags: [线段树]
 
 ## [LeetCode 2569. 更新数组后处理求和查询](https://leetcode.cn/problems/handling-sum-queries-after-update/)
 
-`困难`
+<font color=red>困难</font>
 
 给你两个下标从 0 开始的数组 nums1 和 nums2 ，和一个二维数组 queries 表示一些操作。总共有 3 种类型的操作：
 

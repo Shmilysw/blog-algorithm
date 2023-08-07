@@ -9,7 +9,7 @@ tags: [单调栈, 贡献法]
 
 ## [LeetCode 2104. 子数组范围和](https://leetcode.cn/problems/sum-of-subarray-ranges/description/)
 
-`中等`
+<font color=#dca124>中等</font>
 
 给你一个整数数组 nums 。nums 中，子数组的 范围 是子数组中最大元素和最小元素的差值。
 

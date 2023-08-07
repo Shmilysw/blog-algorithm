@@ -9,7 +9,7 @@ tags: [dp, 数位dp]
 
 ## [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers/)
 
-`困难`
+<font color=red>困难</font>
 
 如果一个正整数每一个数位都是 互不相同 的，我们称它是 特殊整数 。
 
