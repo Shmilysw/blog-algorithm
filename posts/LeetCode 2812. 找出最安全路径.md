@@ -60,6 +60,123 @@ tags: [bfs, 二分]
 + grid[i][j] 为 0 或 1
 + grid 至少存在一个小偷
 
+```python
+# 并查集
+# 接近于 O(n^2)
+# 从大到小枚举答案
+class Solution:
+    def maximumSafenessFactor(self, grid: List[List[int]]) -> int:
+        n = len(grid)
+        q = []
+        dis = [[-1] * n for _ in range(n)]
+        for i, row in enumerate(grid):
+            for j, x in enumerate(row):
+                if x:
+                    q.append((i, j))
+                    dis[i][j] = 0
+        
+        groups = [q]
+        while q:
+            tmp = q
+            q = []
+            for i, j in tmp:
+                for x, y in (i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1):
+                    if 0 <= x < n and 0 <= y < n and dis[x][y] < 0:
+                        q.append((x, y))
+                        dis[x][y] = len(groups)
+            groups.append(q)
+        
+        # 并查集模板
+        fa = list(range(n * n))
+        def find(x: int) -> int:
+            if x != fa[x]:
+                fa[x] = find(fa[x])
+            return fa[x]
+        def merge(x: int, y: int) -> None:
+            fa[find(x)] = find(y)
+
+        for res in range(len(groups) - 2, 0, -1):
+            for i, j in groups[res]:
+                for x, y in (i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1):
+                    if 0 <= x < n and 0 <= y < n and dis[x][y] >= dis[i][j]:
+                        merge(x * n + y, i * n + j)
+            if find(0) == find(n * n - 1):
+                return res
+        return 0
+```
+---
+```cpp
+// 并查集
+// 接近于 O(n^2)
+// 从大到小枚举答案
+
+typedef pair<int, int> PII;
+int dx[4] = {0, 1, 0, -1}, dy[4] = {1, 0, -1, 0};
+int fa[200010];
+
+class Solution {
+public:
+    int find(int x) {
+        if (x != fa[x])
+            fa[x] = find(fa[x]);
+        return fa[x];
+    }
+    void merge(int x, int y) {
+        fa[find(x)] = find(y);
+    }
+    int maximumSafenessFactor(vector<vector<int>>& grid) {
+        int n = grid.size();
+        vector<PII> q;
+        vector<vector<int>> dis(n, vector<int>(n, -1));
+        for (int i = 0; i < n ; i ++ ) {
+            for (int j = 0; j < n ; j ++ ) {
+                if (grid[i][j] == 1) {
+                    q.push_back({i, j});
+                    dis[i][j] = 0;
+                }
+            }
+        }
+        vector<vector<PII>> groups;
+        groups.push_back(q);
+        vector<PII> tmp;
+        // 搜索
+        while (q.size()) {
+            tmp = q;
+            q.clear();
+            int cnt = groups.size();
+            if (tmp.size()) {
+                for (auto [f, s]: tmp) {
+                    for (int i = 0; i < 4 ; i ++ ) {
+                        int x = f + dx[i], y = s + dy[i];
+                        if (x < 0 || x >= n || y < 0 || y >= n || dis[x][y] >= 0)
+                            continue;
+                        q.push_back({x, y});
+                        dis[x][y] = cnt;
+                    }
+                }
+            }
+            groups.push_back(q);
+        }
+        // 并查集初始化
+        for (int i = 0; i < n * n ; i ++ )
+            fa[i] = i;
+        for (int res = groups.size() - 2; res > 0 ; res -- ) {
+            for (auto [f, s]: groups[res]) {
+                for (int i = 0; i < 4 ; i ++ ) {
+                    int x = f + dx[i], y = s + dy[i];
+                    if (x < 0 || x >= n || y < 0 || y >= n || dis[x][y] < dis[f][s])
+                            continue;
+                    merge(x * n + y, f * n + s);
+                }
+            }
+            if (find(0) == find(n * n - 1)) 
+                return res;
+        }
+        return 0;
+    }
+};
+```
+---
 ```cpp
 /*
 多源 bfs + 二分
