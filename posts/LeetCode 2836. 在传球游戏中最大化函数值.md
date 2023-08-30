@@ -97,3 +97,68 @@ public:
     }
 };
 ```
+---
+```python
+'''
+# pa[x][i] 表示 x 的第 2 ^ i 个祖先节点
+pa[x][0] = parent[x]
+pa[x][1] = pa[pa[x][0]][0]
+pa[x][i + 1] = pa[pa[x][i]][i]
+pa[x][i] = (p, s) 表示从 x 向上跳 2 ^ i 步能到达 p 点, 以及节点和 s 
+'''
+class Solution:
+    def getMaxFunctionValue(self, receiver: List[int], k: int) -> int:
+        n = len(receiver)
+        m = 35
+        pa = [[(p, p)] + [None] * m for p in receiver]
+        for i in range(m):
+            for x in range(n):
+                p, s = pa[x][i] # 2 ^ i
+                pp, ss = pa[p][i] # 2 ^ i
+                pa[x][i + 1] = (pp, s + ss) # 2 ^ (i + 1)
+        res = 0
+        for i in range(n):
+            x = sum = i # 从这个 x 节点向上跳, 这个节点编号为 i (因为答案是编号和)
+            for j in range(m):
+                if (k >> j) & 1: # 需要向上跳 2 ^ j 步
+                    x, s = pa[x][j] # 2 ^ j
+                    sum += s
+            res = max(res, sum)
+        return res
+```
+---
+```cpp
+using i64 = long long;
+const int N = 1e5 + 10, M = 36;
+
+i64 pa[N][M], val[N][M];
+
+class Solution {
+public:
+    long long getMaxFunctionValue(vector<int>& receiver, long long k) {
+        int n = receiver.size();
+        for (int i = 0; i < n ; i ++ ) {
+            pa[i][0] = val[i][0] = receiver[i];
+        }
+        for (int j = 1; j <= 35 ; j ++ ) {
+            for (int i = 0; i < n ; i ++ ) {
+                i64 p = pa[i][j - 1], s = val[i][j - 1];
+                pa[i][j] = pa[p][j - 1];
+                val[i][j] = val[p][j - 1] + s;
+            }
+        }
+        i64 res = 0;
+        for (int i = 0; i < n ; i ++ ) {
+            i64 p = i, sum = i;
+            for (int j = 0; j <= 35 ; j ++ ) {
+                if (k >> j & 1) {
+                    sum += val[p][j];
+                    p = pa[p][j];
+                }
+            }
+            res = max(res, sum);
+        }
+        return res;
+    }
+};
+```
